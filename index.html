@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clubs — Connect. Play. Win.</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav__logo">CLUBS</div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#join">Join</a></li>
+    </ul>
+    <button class="nav__cta" onclick="scrollToJoin()">Get Started</button>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="closeMenu">&times;</button>
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#features" onclick="closeMobileMenu()">Features</a></li>
+      <li><a href="#join" onclick="closeMobileMenu()">Join</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="orb orb--1"></div>
+      <div class="orb orb--2"></div>
+      <div class="orb orb--3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero__content">
+      <span class="hero__badge">🏆 #1 Club Platform</span>
+      <h1 class="hero__title">
+        <span class="line line--1">CONNECT.</span>
+        <span class="line line--2">PLAY.</span>
+        <span class="line line--3">WIN.</span>
+      </h1>
+      <p class="hero__sub">The ultimate platform to discover, join, and manage sports &amp; activity clubs in your city.</p>
+      <div class="hero__actions">
+        <button class="btn btn--primary" onclick="scrollToJoin()">Join a Club</button>
+        <button class="btn btn--ghost" onclick="scrollToFeatures()">See How It Works</button>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" data-target="1200">0</span>
+          <span class="stat__label">Clubs</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="48000">0</span>
+          <span class="stat__label">Members</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num" data-target="320">0</span>
+          <span class="stat__label">Cities</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="card-stack">
+        <div class="club-card club-card--back2">
+          <div class="club-card__icon">⚽</div>
+          <div class="club-card__name">FC United</div>
+          <div class="club-card__members">142 members</div>
+        </div>
+        <div class="club-card club-card--back1">
+          <div class="club-card__icon">🎾</div>
+          <div class="club-card__name">Tennis Pro</div>
+          <div class="club-card__members">89 members</div>
+        </div>
+        <div class="club-card club-card--front">
+          <div class="club-card__header">
+            <div class="club-card__icon">🏀</div>
+            <span class="club-card__badge">LIVE</span>
+          </div>
+          <div class="club-card__name">Slam Dunkers</div>
+          <div class="club-card__members">213 members</div>
+          <div class="club-card__bar">
+            <div class="club-card__bar-fill"></div>
+          </div>
+          <div class="club-card__meta">Activity: High</div>
+          <button class="club-card__btn">Join Now →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-label">Who We Are</div>
+      <h2 class="section-title">Built for players,<br/><em>by players.</em></h2>
+      <p class="about__text">Clubs was founded with one idea: make it effortless for people to find their tribe. Whether you're a weekend warrior or a competitive athlete, there's a club waiting for you.</p>
+      <div class="about__pillars">
+        <div class="pillar">
+          <div class="pillar__icon">🎯</div>
+          <h3>Focused</h3>
+          <p>Every feature is designed around real club needs — scheduling, communication, and growth.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">🤝</div>
+          <h3>Community First</h3>
+          <p>We believe the best experiences happen together. Our tools bring people closer.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar__icon">⚡</div>
+          <h3>Fast & Reliable</h3>
+          <p>Deployed on GCP with CI/CD pipelines so the platform is always up when you need it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Everything your<br/>club needs.</h2>
+      <div class="features__grid">
+        <div class="feature-card" data-delay="0">
+          <div class="feature-card__num">01</div>
+          <div class="feature-card__icon">🔍</div>
+          <h3>Discover Clubs</h3>
+          <p>Search by sport, city, or skill level. Find clubs that match your vibe and schedule.</p>
+        </div>
+        <div class="feature-card" data-delay="100">
+          <div class="feature-card__num">02</div>
+          <div class="feature-card__icon">📅</div>
+          <h3>Smart Scheduling</h3>
+          <p>Automated event coordination, RSVP tracking, and reminders built right in.</p>
+        </div>
+        <div class="feature-card" data-delay="200">
+          <div class="feature-card__num">03</div>
+          <div class="feature-card__icon">💬</div>
+          <h3>Group Chat</h3>
+          <p>Real-time messaging with your club members. Pin announcements and share media.</p>
+        </div>
+        <div class="feature-card" data-delay="300">
+          <div class="feature-card__num">04</div>
+          <div class="feature-card__icon">📊</div>
+          <h3>Analytics</h3>
+          <p>Track attendance, engagement, and club growth with easy-to-read dashboards.</p>
+        </div>
+        <div class="feature-card" data-delay="400">
+          <div class="feature-card__num">05</div>
+          <div class="feature-card__icon">🏅</div>
+          <h3>Leaderboards</h3>
+          <p>Gamify participation with points, badges, and competitive rankings.</p>
+        </div>
+        <div class="feature-card" data-delay="500">
+          <div class="feature-card__num">06</div>
+          <div class="feature-card__icon">🔒</div>
+          <h3>Private Clubs</h3>
+          <p>Create invite-only clubs with full privacy controls for your inner circle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN -->
+  <section class="join" id="join">
+    <div class="container">
+      <div class="join__inner">
+        <div class="join__text">
+          <div class="section-label">Get Started</div>
+          <h2 class="section-title">Ready to find<br/>your club?</h2>
+          <p>Join thousands of players already using Clubs. It's free to get started.</p>
+        </div>
+        <form class="join__form" id="joinForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="rahul@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="sport">Favourite Sport</label>
+            <select id="sport">
+              <option value="">Select a sport...</option>
+              <option>Football</option>
+              <option>Basketball</option>
+              <option>Tennis</option>
+              <option>Cricket</option>
+              <option>Badminton</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Create My Account →</button>
+          <p class="form__note">No credit card required. Free forever for members.</p>
+        </form>
+        <div class="join__success" id="successMsg">
+          <div class="success__icon">🎉</div>
+          <h3>You're on the list!</h3>
+          <p>We'll reach out soon with your club matches.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">CLUBS</div>
+          <p>Connecting players worldwide.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#join">Join</a>
+          <a href="#">Privacy</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Clubs. Deployed on GCP via GitHub CI/CD.</span>
+        <span>Made with ❤️ in Bengaluru</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

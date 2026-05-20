@@ -13,7 +13,7 @@ jobs:
     steps:
       # 1. Pull your repo code
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # 2. SSH into the GCP VM and git pull
       - name: Deploy via SSH
@@ -28,8 +28,8 @@ jobs:
             cd /var/www/html
 
             # Pull latest code from GitHub
-            sudo git fetch origin main
-            sudo git reset --hard origin/main
+            git fetch origin main
+            git reset --hard origin/main
 
             # Fix file permissions for Nginx
             sudo chown -R www-data:www-data /var/www/html
